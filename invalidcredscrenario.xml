@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SmokeSuite" parallel="classes" thread-count="2">
+	<listeners>
+		
+		<listener class-name="com.qa.TestUtils.CustomListener"/>
+		
+	</listeners>
+	
+  <test name="FailedTestCase">
+        <classes>
+            <class name="com.qa.SignInWithInvalidCredentials">
+                <methods>
+                    <include name="SignInWithInvalidUser"/>
+                    <include name="clickOnSignInButton"/>
+                    <!-- Add more test cases with priorities as needed -->
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    
+</suite> <!-- Suite -->
